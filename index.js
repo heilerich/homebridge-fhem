@@ -1100,7 +1100,7 @@ FHEMAccessory(platform, s) {
   } else if( match = s.PossibleSets.match(/(^| )pct\b/) ) {
     // HM dimmer
     if( !this.service_name ) this.service_name = 'light';
-    this.mappings.On = { reading: 'pct', valueOff: '0', cmdOn: 'on', cmdOff: 'off' };
+    this.mappings.On = { reading: 'pct', valueOff: '0', cmdOn: 'dummy_on', cmdOff: 'off' };
     this.mappings.Brightness = { reading: 'pct', cmd: 'pct', delay: true };
 
   } else if( match = s.PossibleSets.match(/(^| )dim\d+%/) ) {
